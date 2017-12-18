@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      FIH Control
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+	<ion-card>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-9><br><p>{{fecha}}</p></ion-col>
+        <ion-col col-3><button color="dark" ion-button icon-only (click)="reload()">
+              <ion-icon name="refresh-circle"></ion-icon>
+            </button></ion-col>
+      </ion-row>
+    </ion-grid>
+
+		<div text-center>
+			<ion-img  style="width: 200px; height: 250px;" src="http://cuuapp01.cuuws.mx.efoxconn.com:8081/{{no_emp}}.jpg"></ion-img>
+		</div>
+  		 <ion-item-group >
+    	<ion-item-divider > 
+    		<button ion-item>
+    			<ion-icon name="person"></ion-icon>
+    			<b>Información De Usuario</b>
+    		</button>
+    	</ion-item-divider>
+
+      		<ion-item>
+    			<ion-label>&nbsp;&nbsp;&nbsp;&nbsp;Nombre:</ion-label>
+    			<ion-label text-center>{{nombre}}</ion-label>
+  			</ion-item>
+		
+  			<ion-item >
+    			<ion-label>&nbsp;&nbsp;&nbsp;&nbsp;No. Empleado</ion-label>
+    			<ion-label text-center>{{no_emp}}</ion-label>
+  			</ion-item>
+  	</ion-item-group>
+
+  	<ion-item-group >
+    	<ion-item-divider >
+    		<button ion-item>
+    			<ion-icon name="phone-portrait"></ion-icon>
+    		<b>Información de Dispositivo</b>
+    		</button>
+    		</ion-item-divider>
+  			<ion-item >
+    			<ion-label>&nbsp;&nbsp;&nbsp;&nbsp;Modelo</ion-label>
+    			<ion-label text-center>{{model}}</ion-label>
+  			</ion-item>
+		
+  			<ion-item >
+    			<ion-label>&nbsp;&nbsp;&nbsp;&nbsp;Serie</ion-label>
+    			<ion-label text-center>{{serie}}</ion-label>
+  			</ion-item>	
+  	</ion-item-group>
+	</ion-card>
+ 	
+
+</ion-content>
