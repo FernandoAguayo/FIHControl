@@ -47,13 +47,13 @@ constructor(public device: Device,platform: Platform,http: Http,network: Network
 	platform.ready().then(() => {
 	this.id=device.uuid;
   this.serie=device.serial;
-  //this.id="246d567006a8559d";k
+  //this.id="246d567006a8559d";
 	if( this.id != null ){
 		
 
   		if(network.type === 'wifi' ){
   			  http.get('http://10.19.35.89:8087/cgi-bin/applications/testApp/test.pl?id='+this.id)
-            .timeout(2000)
+            .timeout(3000)
             .map(res => res.json()).subscribe(data => {
                 this.model=device.model;
                 this.nombre = data.nombre;
